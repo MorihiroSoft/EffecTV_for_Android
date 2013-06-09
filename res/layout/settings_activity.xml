@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    android:title="@string/settings" >
+
+    <PreferenceCategory android:title="@string/settings_params_category_title" >
+
+        <MultiSelectListPreference
+            android:key="@string/settings_effect_hide_list_key"
+            android:title="@string/settings_effect_hide_list_title" />
+
+        <ListPreference
+            android:entries="@array/settings_camera_size_values"
+            android:entryValues="@array/settings_camera_size_values"
+            android:key="@string/settings_camera_size_key"
+            android:title="@string/settings_camera_size_title" />
+
+        <ListPreference
+            android:entries="@array/settings_camera_fps_values"
+            android:entryValues="@array/settings_camera_fps_values"
+            android:key="@string/settings_camera_fps_key"
+            android:title="@string/settings_camera_fps_title" />
+
+        <ListPreference
+            android:entries="@array/settings_photo_fmt_values"
+            android:entryValues="@array/settings_photo_fmt_values"
+            android:key="@string/settings_photo_fmt_key"
+            android:title="@string/settings_photo_fmt_title" />
+
+        <ListPreference
+            android:entries="@array/settings_video_mime_values"
+            android:entryValues="@array/settings_video_mime_values"
+            android:key="@string/settings_video_mime_key"
+            android:title="@string/settings_video_mime_title" />
+
+        <ListPreference
+            android:entries="@array/settings_video_bps_entries"
+            android:entryValues="@array/settings_video_bps_values"
+            android:key="@string/settings_video_bps_key"
+            android:title="@string/settings_video_bps_title" />
+
+        <ListPreference
+            android:entries="@array/settings_video_ifi_entries"
+            android:entryValues="@array/settings_video_ifi_values"
+            android:key="@string/settings_video_ifi_key"
+            android:title="@string/settings_video_ifi_title" />
+
+        <ListPreference
+            android:entries="@array/settings_save_path_values"
+            android:entryValues="@array/settings_save_path_values"
+            android:key="@string/settings_save_path_key"
+            android:title="@string/settings_save_path_title" />
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="@string/settings_info_category_title" >
+
+        <jp.effectv.android.AboutPreference
+            android:dialogMessage="@string/settings_about_message"
+            android:dialogTitle="@string/app_name"
+            android:key="@string/settings_about_key"
+            android:title="@string/settings_about_title" />
+
+        <jp.effectv.android.AboutPreference
+            android:dialogMessage="@string/settings_changelog_message"
+            android:key="@string/settings_changelog_key"
+            android:title="@string/settings_changelog_title" />
+    </PreferenceCategory>
+
+</PreferenceScreen>

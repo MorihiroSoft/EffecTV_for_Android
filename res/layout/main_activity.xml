@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FF8C8C8C"
+    android:baselineAligned="false"
+    android:orientation="horizontal" >
+
+    <LinearLayout
+        android:layout_width="64dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <ImageButton
+            android:id="@+id/btn_face"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:contentDescription="@string/contentDescription"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_switch_photo_facing_holo_light" />
+
+        <ImageButton
+            android:id="@+id/btn_menu"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:contentDescription="@string/contentDescription"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_settings_holo_light" />
+
+        <ListView
+            android:id="@+id/lst_effects"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginBottom="4dp"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="4dp"
+            android:layout_marginTop="4dp"
+            android:layout_weight="1"
+            android:background="@drawable/bg_border"
+            android:choiceMode="singleChoice"
+            android:divider="@android:color/black"
+            android:dividerHeight="1sp"
+            android:fadeScrollbars="false" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1" >
+
+        <jp.effectv.android.EffectView
+            android:id="@+id/effectview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <jp.effectv.android.CameraView
+            android:id="@+id/cameraview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="64dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <ImageButton
+            android:id="@+id/btn_photo"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:contentDescription="@string/contentDescription"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_switch_camera" />
+
+        <ImageButton
+            android:id="@+id/btn_video"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:contentDescription="@string/contentDescription"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_switch_video" />
+
+        <ToggleButton
+            android:id="@+id/btn_lock"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:textColor="@android:color/black"
+            android:textOff="@string/auto_lock"
+            android:textOn="@string/auto_lock"
+            android:textSize="12sp" />
+
+        <ListView
+            android:id="@+id/lst_funcs"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginBottom="4dp"
+            android:layout_marginLeft="4dp"
+            android:layout_marginRight="2dp"
+            android:layout_marginTop="4dp"
+            android:layout_weight="1"
+            android:background="@drawable/bg_border"
+            android:divider="@android:color/black"
+            android:dividerHeight="1sp"
+            android:fadeScrollbars="false" />
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">EffecTV for Android</string>
+    <string name="txt_photo">Photo</string>
+    <string name="txt_video">Video</string>
+    <string name="contentDescription"></string>
+    <string name="settings">Settings</string>
+    <string name="settings_word_low">Low</string>
+    <string name="settings_word_high">High</string>
+    <string name="settings_word_standard">Standard</string>
+    <string name="settings_word_custom">Custom</string>
+    <string name="settings_effect_hide_list_key">EFFECT_HIDE_LIST</string>
+    <string name="settings_camera_id_key">CAMERA_ID</string>
+    <string name="settings_camera_size_key">CAMERA_SIZE</string>
+    <string name="settings_camera_fps_key">CAMERA_FPS</string>
+    <string name="settings_photo_fmt_key">PHOTO_FMT</string>
+    <string name="settings_video_mime_key">VIDEO_MIME</string>
+    <string name="settings_video_bps_key">VIDEO_BPS</string>
+    <string name="settings_video_ifi_key">VIDEO_IFI</string>
+    <string name="settings_save_path_key">SAVE_PATH</string>
+    <string name="settings_about_key">ABOUT</string>
+    <string name="settings_changelog_key">CHANGELOG</string>
+    <string name="settings_save_path_custom_key">SAVE_PATH_CUSTOM</string>
+    <string name="settings_params_category_title">PARAMETERS</string>
+    <string name="settings_effect_hide_list_title">Hide effects</string>
+    <string name="settings_camera_size_title">Camera size</string>
+    <string name="settings_camera_fps_title">Camera/Video FPS</string>
+    <string name="settings_photo_fmt_title">Photo format</string>
+    <string name="settings_video_mime_title">Video format</string>
+    <string name="settings_video_bps_title">Video quality</string>
+    <string name="settings_video_ifi_title">Video I-frame interval</string>
+    <string name="settings_save_path_title">Save path</string>
+    <string name="settings_info_category_title">INFORMATION</string>
+    <string name="settings_about_title">About</string>
+    <string name="settings_about_message">file:///android_asset/about.html</string>
+    <string name="settings_changelog_title">ChangeLog</string>
+    <string name="settings_changelog_message">file:///android_asset/changelog.html</string>
+    <string name="auto_lock">AE/WB Lock</string>
+
+</resources>

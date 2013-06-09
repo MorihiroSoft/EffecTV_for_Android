@@ -1,0 +1,22 @@
+(1) Apache License, Version 2.0 (NOTICE)
+
+	[Files]
+		./res/drawable-hdpi/ic_settings_holo_light.png
+		./res/drawable-hdpi/ic_switch_camera.png
+		./res/drawable-hdpi/ic_switch_video.png
+		./res/drawable-hdpi/ic_switch_video_active.png
+		./res/drawable-hdpi/ic_switch_photo_facing_holo_light.png
+
+	[Original]
+		Android Open Source Project - http://source.android.com/
+			android-4.2.0_r1.0/packages/apps/Camera/res/drawable-hdpi/
+
+(2) GNU GENERAL PUBLIC LICENSE Version 2 (COPYING)
+
+	[Files]
+		all others.
+
+	[Original]
+		EffecTV - http://effectv.sourceforge.net/
+			effectv-0.3.11.tar.gz
+
