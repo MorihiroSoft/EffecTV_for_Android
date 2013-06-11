@@ -66,7 +66,7 @@ void TimeDistortion::intialize(bool reset)
 
 	// Clear data
 	bgIsSet       = 0;
-	plane         = 0;
+	plane         = -1;
 	warptimeFrame = 0;
 	buffer        = NULL;
 	planetable    = NULL;
@@ -211,7 +211,14 @@ int TimeDistortion::draw(YUV* src_yuv, RGB32* dst_rgb, char* dst_msg)
 	LOGI("%s(L=%d)", __func__, __LINE__);
 	RGB32* src_rgb = mUtils->yuv_YUVtoRGB(src_yuv);
 
+	if (plane < 0) {
+		for (int i=0; i<PLANES; i++) {
+			memcpy(planetable[i], src_rgb, video_area * PIXEL_SIZE);
+		}
+		plane = 0;
+	} else {
 	memcpy(planetable[plane], src_rgb, video_area * PIXEL_SIZE);
+	}
 
 	if (!bgIsSet) {
 		setBackground(src_yuv);

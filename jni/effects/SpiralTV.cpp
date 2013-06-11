@@ -169,7 +169,7 @@ void SpiralTV::intialize(bool reset)
 	super::intialize(reset);
 
 	// Clear data
-	plane          = PLANE_MAX;
+	plane          = -1;
 	g_focus_x      = 0;
 	g_focus_y      = 0;
 	g_focus_radius = 0;
@@ -330,7 +330,7 @@ int SpiralTV::stop(void)
 	}
 
 	//
-	return super::stop();;
+	return super::stop();
 }
 
 // Convert
@@ -339,7 +339,14 @@ int SpiralTV::draw(YUV* src_yuv, RGB32* dst_rgb, char* dst_msg)
 	LOGI("%s(L=%d)", __func__, __LINE__);
 	RGB32* src_rgb = mUtils->yuv_YUVtoRGB(src_yuv);
 
+	if (plane < 0) {
+		for (int i=0; i<PLANES; i++) {
+			memcpy(planetable[i], src_rgb, video_area * PIXEL_SIZE);
+		}
+		plane = PLANE_MAX;
+	} else {
 	memcpy(planetable[plane], src_rgb, video_area * PIXEL_SIZE);
+	}
 
 	if (g_animate_focus) {
 		spiralMoveFocus();
