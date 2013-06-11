@@ -91,7 +91,7 @@ int StreakTV::readConfig()
 			FREAD_1(fp, ver) &&
 			FREAD_1(fp, show_info) &&
 			FREAD_1(fp, blend) &&
-			FREAD_1(fp, planetable);
+			FREAD_1(fp, delay);
 	fclose(fp);
 	return (rcode ?
 			(ver==CONFIG_VER ? CONFIG_SUCCESS : CONFIG_W_VER) :
@@ -110,7 +110,7 @@ int StreakTV::writeConfig()
 			FWRITE_1(fp, CONFIG_VER) &&
 			FWRITE_1(fp, show_info) &&
 			FWRITE_1(fp, blend) &&
-			FWRITE_1(fp, planetable);
+			FWRITE_1(fp, delay);
 	fclose(fp);
 	return (rcode ? CONFIG_SUCCESS : CONFIG_E_FWRITE);
 }
