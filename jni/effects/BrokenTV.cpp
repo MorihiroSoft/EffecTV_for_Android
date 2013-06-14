@@ -113,6 +113,9 @@ int BrokenTV::writeConfig()
 //---------------------------------------------------------------------
 // Constructor
 BrokenTV::BrokenTV(void)
+: show_info(0)
+, speed(0)
+, offset(0)
 {
 	LOGI("%s(L=%d)", __func__, __LINE__);
 }

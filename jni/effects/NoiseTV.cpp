@@ -114,6 +114,9 @@ int NoiseTV::writeConfig()
 //---------------------------------------------------------------------
 // Constructor
 NoiseTV::NoiseTV(void)
+: show_info(0)
+, threshold(0)
+, bgIsSet(0)
 {
 	LOGI("%s(L=%d)", __func__, __LINE__);
 }

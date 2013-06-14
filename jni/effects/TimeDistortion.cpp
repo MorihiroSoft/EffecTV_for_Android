@@ -123,6 +123,14 @@ int TimeDistortion::writeConfig()
 //---------------------------------------------------------------------
 // Constructor
 TimeDistortion::TimeDistortion(void)
+: show_info(0)
+, threshold(0)
+, bgIsSet(0)
+, plane(0)
+, warptimeFrame(0)
+, buffer(NULL)
+, planetable(NULL)
+, warptime()
 {
 	LOGI("%s(L=%d)", __func__, __LINE__);
 }
@@ -217,7 +225,7 @@ int TimeDistortion::draw(YUV* src_yuv, RGB32* dst_rgb, char* dst_msg)
 		}
 		plane = 0;
 	} else {
-	memcpy(planetable[plane], src_rgb, video_area * PIXEL_SIZE);
+		memcpy(planetable[plane], src_rgb, video_area * PIXEL_SIZE);
 	}
 
 	if (!bgIsSet) {

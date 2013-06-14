@@ -38,7 +38,7 @@
 #define  LOGI(...)
 #endif
 
-static const int CONFIG_VER = 1;
+//static const int CONFIG_VER = 1;
 static const char* EFFECT_NAME  = "BaltanTV";
 static const char* EFFECT_TITLE = "Baltan\nTV";
 static const char* FUNC_LIST[]  = {
@@ -77,6 +77,9 @@ void BaltanTV::intialize(bool reset)
 //---------------------------------------------------------------------
 // Constructor
 BaltanTV::BaltanTV(void)
+: plane(0)
+, buffer(NULL)
+, planetable(NULL)
 {
 	LOGI("%s(L=%d)", __func__, __LINE__);
 }

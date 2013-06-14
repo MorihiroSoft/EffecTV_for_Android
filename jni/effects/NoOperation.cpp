@@ -29,7 +29,7 @@
 #define  LOGI(...)
 #endif
 
-static const int CONFIG_VER = 1;
+//static const int CONFIG_VER = 1;
 static const char* EFFECT_NAME  = "NoOperation";
 static const char* EFFECT_TITLE = "No\noperation";
 static const char* FUNC_LIST[]  = {

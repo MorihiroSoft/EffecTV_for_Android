@@ -130,6 +130,14 @@ int ColorfulStreak::writeConfig()
 //---------------------------------------------------------------------
 // Constructor
 ColorfulStreak::ColorfulStreak(void)
+: show_info(0)
+, blend(0)
+, delay(0)
+, plane(0)
+, buffer(NULL)
+, planetableR(NULL)
+, planetableG(NULL)
+, planetableB(NULL)
 {
 	LOGI("%s(L=%d)", __func__, __LINE__);
 }

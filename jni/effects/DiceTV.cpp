@@ -132,6 +132,12 @@ int DiceTV::writeConfig()
 //---------------------------------------------------------------------
 // Constructor
 DiceTV::DiceTV(void)
+: show_info(0)
+, g_cube_bits(0)
+, g_cube_size(0)
+, g_map_width(0)
+, g_map_height(0)
+, dicemap(NULL)
 {
 	LOGI("%s(L=%d)", __func__, __LINE__);
 }

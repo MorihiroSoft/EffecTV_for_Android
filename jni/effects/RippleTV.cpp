@@ -136,6 +136,18 @@ int RippleTV::writeConfig()
 //---------------------------------------------------------------------
 // Constructor
 RippleTV::RippleTV(void)
+: show_info(0)
+, mode(0)
+, threshold(0)
+, bgIsSet(0)
+, map_w(0)
+, map_h(0)
+, map(NULL)
+, map1(NULL)
+, map2(NULL)
+, map3(NULL)
+, vtable(NULL)
+, sqrtable(NULL)
 {
 	LOGI("%s(L=%d)", __func__, __LINE__);
 }
@@ -252,8 +264,8 @@ int RippleTV::draw(YUV* src_yuv, RGB32* dst_rgb, char* dst_msg)
 		r = map3 + mw + 1;
 		for (int y=mh-2; y>0; y--) {
 			for (int x=mw-2; x>0; x--) {
-				int h = *(p-mw-1) + *(p-mw+1) + *(p+mw-1) + *(p+mw+1)
-								  + *(p-mw) + *(p-1) + *(p+1) + *(p+mw) - (*p)*9;
+				int h = *(p-mw-1) + *(p-mw+1) + *(p+mw-1) + *(p+mw+1) +
+						*(p-mw) + *(p-1) + *(p+1) + *(p+mw) - (*p)*9;
 				h = h >> 3;
 				int v = *p - *q;
 				v += h - (v >> decay);

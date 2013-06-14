@@ -38,7 +38,7 @@
 #define  LOGI(...)
 #endif
 
-static const int CONFIG_VER = 1;
+//static const int CONFIG_VER = 1;
 static const char* EFFECT_NAME  = "WarholTV";
 static const char* EFFECT_TITLE = "Warhol\nTV";
 static const char* FUNC_LIST[]  = {

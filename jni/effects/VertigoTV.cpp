@@ -123,6 +123,17 @@ int VertigoTV::writeConfig()
 //---------------------------------------------------------------------
 // Constructor
 VertigoTV::VertigoTV(void)
+: show_info(0)
+, dx(0)
+, dy(0)
+, sx(0)
+, sy(0)
+, phase(0)
+, phase_increment(0)
+, zoomrate(0)
+, buffer(NULL)
+, current_buffer(NULL)
+, alt_buffer(NULL)
 {
 	LOGI("%s(L=%d)", __func__, __LINE__);
 }

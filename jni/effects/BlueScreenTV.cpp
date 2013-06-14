@@ -160,6 +160,16 @@ int BlueScreenTV::writeConfig()
 //---------------------------------------------------------------------
 // Constructor
 BlueScreenTV::BlueScreenTV(void)
+: show_info(0)
+, threshold(0)
+, threshold2(0)
+, bgSetCnt(0)
+, bgSetCntTime(0)
+, bcSetCnt(0)
+, bgimage(NULL)
+, bgimageTmp(NULL)
+, bluescreen_min(NULL)
+, bluescreen_max(NULL)
 {
 	LOGI("%s(L=%d)", __func__, __LINE__);
 }

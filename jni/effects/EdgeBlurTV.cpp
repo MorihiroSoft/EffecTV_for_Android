@@ -125,6 +125,12 @@ int EdgeBlurTV::writeConfig()
 //---------------------------------------------------------------------
 // Constructor
 EdgeBlurTV::EdgeBlurTV(void)
+: show_info(0)
+, threshold(0)
+, blurFrame(0)
+, blur()
+, palette(NULL)
+, palettes(NULL)
 {
 	LOGI("%s(L=%d)", __func__, __LINE__);
 }

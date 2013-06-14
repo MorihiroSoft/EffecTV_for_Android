@@ -130,6 +130,12 @@ int PUPTV::writeConfig()
 //---------------------------------------------------------------------
 // Constructor
 PUPTV::PUPTV(void)
+: show_info(0)
+, bgIsSet(0)
+, mode(0)
+, param(0)
+, phase(0)
+, buffer(NULL)
 {
 	LOGI("%s(L=%d)", __func__, __LINE__);
 }

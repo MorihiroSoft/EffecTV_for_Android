@@ -124,6 +124,14 @@ int NervousTV::writeConfig()
 //---------------------------------------------------------------------
 // Constructor
 NervousTV::NervousTV(void)
+: show_info(0)
+, mode(0)
+, plane(0)
+, timer(0)
+, stride(0)
+, readplane(0)
+, buffer(NULL)
+, planetable(NULL)
 {
 	LOGI("%s(L=%d)", __func__, __LINE__);
 }

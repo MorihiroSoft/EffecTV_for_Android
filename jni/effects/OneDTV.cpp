@@ -116,6 +116,12 @@ int OneDTV::writeConfig()
 //---------------------------------------------------------------------
 // Constructor
 OneDTV::OneDTV(void)
+: show_info(0)
+, speed(0)
+, line(0)
+, prev_line(0)
+, prev_cnt(0)
+, linebuf(NULL)
 {
 	LOGI("%s(L=%d)", __func__, __LINE__);
 }

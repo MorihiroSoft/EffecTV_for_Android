@@ -246,6 +246,22 @@ int SpiralTV::writeConfig()
 //---------------------------------------------------------------------
 // Constructor
 SpiralTV::SpiralTV(void)
+: show_info(0)
+, plane(0)
+, mode(0)
+, g_focus_x(0)
+, g_focus_y(0)
+, g_focus_radius(0)
+, g_animate_focus(0)
+, g_focus_counter(0)
+, g_focus_interval(0)
+, g_focus_degree(0)
+, g_focus_increment(0)
+, g_depth_shift(0)
+, g_wave_table(NULL)
+, buffer(NULL)
+, planetable(NULL)
+, depthmap(NULL)
 {
 	LOGI("%s(L=%d)", __func__, __LINE__);
 }
@@ -345,7 +361,7 @@ int SpiralTV::draw(YUV* src_yuv, RGB32* dst_rgb, char* dst_msg)
 		}
 		plane = PLANE_MAX;
 	} else {
-	memcpy(planetable[plane], src_rgb, video_area * PIXEL_SIZE);
+		memcpy(planetable[plane], src_rgb, video_area * PIXEL_SIZE);
 	}
 
 	if (g_animate_focus) {

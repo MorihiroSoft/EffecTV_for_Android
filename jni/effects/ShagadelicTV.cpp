@@ -120,6 +120,20 @@ int ShagadelicTV::writeConfig()
 //---------------------------------------------------------------------
 // Constructor
 ShagadelicTV::ShagadelicTV(void)
+: show_info(0)
+, phase(0)
+, rx(0)
+, ry(0)
+, bx(0)
+, by(0)
+, rvx(0)
+, rvy(0)
+, bvx(0)
+, bvy(0)
+, mask(0)
+, mask0(0)
+, ripple(NULL)
+, spiral(NULL)
 {
 	LOGI("%s(L=%d)", __func__, __LINE__);
 }

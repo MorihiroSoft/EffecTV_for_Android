@@ -47,7 +47,7 @@
 #define  LOGI(...)
 #endif
 
-static const int CONFIG_VER = 1;
+//static const int CONFIG_VER = 1;
 static const char* EFFECT_NAME  = "EdgeTV";
 static const char* EFFECT_TITLE = "EdgeTV";
 static const char* FUNC_LIST[]  = {
@@ -82,6 +82,10 @@ void EdgeTV::intialize(bool reset)
 //---------------------------------------------------------------------
 // Constructor
 EdgeTV::EdgeTV(void)
+: map_width(0)
+, map_height(0)
+, video_width_margin(0)
+, map(NULL)
 {
 	LOGI("%s(L=%d)", __func__, __LINE__);
 }

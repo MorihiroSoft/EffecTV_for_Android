@@ -118,6 +118,11 @@ int LifeTV::writeConfig()
 //---------------------------------------------------------------------
 // Constructor
 LifeTV::LifeTV(void)
+: show_info(0)
+, threshold(0)
+, field(NULL)
+, field1(NULL)
+, field2(NULL)
 {
 	LOGI("%s(L=%d)", __func__, __LINE__);
 }

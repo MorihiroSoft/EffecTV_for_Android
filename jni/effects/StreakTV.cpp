@@ -120,6 +120,12 @@ int StreakTV::writeConfig()
 //---------------------------------------------------------------------
 // Constructor
 StreakTV::StreakTV(void)
+: show_info(0)
+, blend(0)
+, delay(0)
+, plane(0)
+, buffer(NULL)
+, planetable(NULL)
 {
 	LOGI("%s(L=%d)", __func__, __LINE__);
 }

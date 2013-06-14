@@ -129,6 +129,12 @@ int BurningTV::writeConfig()
 //---------------------------------------------------------------------
 // Constructor
 BurningTV::BurningTV(void)
+: show_info(0)
+, mode(0)
+, threshold(0)
+, bgIsSet(0)
+, palette(NULL)
+, buffer(NULL)
 {
 	LOGI("%s(L=%d)", __func__, __LINE__);
 }

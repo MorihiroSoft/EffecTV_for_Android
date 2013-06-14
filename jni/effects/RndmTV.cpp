@@ -104,6 +104,7 @@ int RndmTV::writeConfig()
 //---------------------------------------------------------------------
 // Constructor
 RndmTV::RndmTV(void)
+: mode(0)
 {
 	LOGI("%s(L=%d)", __func__, __LINE__);
 }

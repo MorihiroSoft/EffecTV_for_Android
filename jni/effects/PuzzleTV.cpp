@@ -124,6 +124,19 @@ int PuzzleTV::writeConfig()
 //---------------------------------------------------------------------
 // Constructor
 PuzzleTV::PuzzleTV(void)
+: hint(0)
+, blockSizeW(0)
+, blockSizeH(0)
+, blockW(0)
+, blockH(0)
+, blockNum(0)
+, marginW(0)
+, marginH(0)
+, phase(0)
+, movingBlock(0)
+, spaceBlock(0)
+, autoSolveTimer(0)
+, blocks(NULL)
 {
 	LOGI("%s(L=%d)", __func__, __LINE__);
 }

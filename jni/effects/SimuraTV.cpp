@@ -153,6 +153,15 @@ int SimuraTV::writeConfig()
 //---------------------------------------------------------------------
 // Constructor
 SimuraTV::SimuraTV(void)
+: show_info(0)
+, mirror(0)
+, color_mode(0)
+, color_level(0)
+, color(0)
+, w1(0)
+, h1(0)
+, w2(0)
+, h2(0)
 {
 	LOGI("%s(L=%d)", __func__, __LINE__);
 }

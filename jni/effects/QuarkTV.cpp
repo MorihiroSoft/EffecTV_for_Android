@@ -113,6 +113,11 @@ int QuarkTV::writeConfig()
 //---------------------------------------------------------------------
 // Constructor
 QuarkTV::QuarkTV(void)
+: show_info(0)
+, delay(0)
+, plane(0)
+, buffer(NULL)
+, planetable(NULL)
 {
 	LOGI("%s(L=%d)", __func__, __LINE__);
 }

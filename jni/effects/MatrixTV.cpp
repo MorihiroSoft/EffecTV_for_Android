@@ -141,6 +141,17 @@ int MatrixTV::writeConfig()
 //---------------------------------------------------------------------
 // Constructor
 MatrixTV::MatrixTV(void)
+: show_info(0)
+, mode(0)
+, pause(0)
+, mapW(0)
+, mapH(0)
+, cmap(NULL)
+, vmap(NULL)
+, img(NULL)
+, font(NULL)
+, palette(NULL)
+, blips(NULL)
 {
 	LOGI("%s(L=%d)", __func__, __LINE__);
 }

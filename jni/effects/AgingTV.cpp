@@ -38,7 +38,7 @@
 #define  LOGI(...)
 #endif
 
-static const int CONFIG_VER = 1;
+//static const int CONFIG_VER = 1;
 static const char* EFFECT_NAME  = "AgingTV";
 static const char* EFFECT_TITLE = "Aging\nTV";
 static const char* FUNC_LIST[] = {
@@ -80,6 +80,12 @@ void AgingTV::intialize(bool reset)
 //---------------------------------------------------------------------
 // Constructor
 AgingTV::AgingTV(void)
+: aging_mode(0)
+, scratch_lines(0)
+, scratches(NULL)
+, area_scale(0)
+, pits_interval(0)
+, dust_interval(0)
 {
 	LOGI("%s(L=%d)", __func__, __LINE__);
 }

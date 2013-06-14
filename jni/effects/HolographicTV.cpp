@@ -120,6 +120,13 @@ int HolographicTV::writeConfig()
 //---------------------------------------------------------------------
 // Constructor
 HolographicTV::HolographicTV(void)
+: show_info(0)
+, threshold(0)
+, bgSetCnt(0)
+, bgimage(NULL)
+, bgimageY(NULL)
+, bgimageYTmp(NULL)
+, noisepattern(NULL)
 {
 	LOGI("%s(L=%d)", __func__, __LINE__);
 }

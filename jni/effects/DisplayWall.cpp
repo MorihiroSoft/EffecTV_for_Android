@@ -135,6 +135,19 @@ int DisplayWall::writeConfig()
 //---------------------------------------------------------------------
 // Constructor
 DisplayWall::DisplayWall(void)
+: show_info(0)
+, scale(0)
+, speed(0)
+, dx(0)
+, dy(0)
+, bx(0)
+, by(0)
+, cx(0)
+, cy(0)
+, mx(0)
+, my(0)
+, vecx(NULL)
+, vecy(NULL)
 {
 	LOGI("%s(L=%d)", __func__, __LINE__);
 }

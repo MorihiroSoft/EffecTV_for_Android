@@ -147,6 +147,17 @@ int NervousHalf::writeConfig()
 //---------------------------------------------------------------------
 // Constructor
 NervousHalf::NervousHalf(void)
+: show_info(0)
+, mode(0)
+, dir(0)
+, mirror(0)
+, delay(0)
+, plane(0)
+, scratchTimer(0)
+, scratchStride(0)
+, scratchCurrent(0)
+, buffer(NULL)
+, planetable(NULL)
 {
 	LOGI("%s(L=%d)", __func__, __LINE__);
 }

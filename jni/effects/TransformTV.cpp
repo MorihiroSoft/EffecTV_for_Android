@@ -130,6 +130,9 @@ int TransformTV::writeConfig()
 //---------------------------------------------------------------------
 // Constructor
 TransformTV::TransformTV(void)
+: show_info(0)
+, mode(0)
+, TableList(NULL)
 {
 	LOGI("%s(L=%d)", __func__, __LINE__);
 }

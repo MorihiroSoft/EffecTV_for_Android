@@ -120,6 +120,13 @@ int ChameleonTV::writeConfig()
 //---------------------------------------------------------------------
 // Constructor
 ChameleonTV::ChameleonTV(void)
+: show_info(0)
+, mode(0)
+, bgIsSet(0)
+, plane(0)
+, bgimage(NULL)
+, sum(NULL)
+, timebuffer(NULL)
 {
 	LOGI("%s(L=%d)", __func__, __LINE__);
 }

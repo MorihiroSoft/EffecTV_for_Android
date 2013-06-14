@@ -126,6 +126,11 @@ int MosaicTV::writeConfig()
 //---------------------------------------------------------------------
 // Constructor
 MosaicTV::MosaicTV(void)
+: show_info(0)
+, threshold(0)
+, bgIsSet(0)
+, mosaic_size(0)
+, mosaic_half(0)
 {
 	LOGI("%s(L=%d)", __func__, __LINE__);
 }

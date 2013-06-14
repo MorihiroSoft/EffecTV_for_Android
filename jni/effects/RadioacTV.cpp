@@ -157,6 +157,23 @@ int RadioacTV::writeConfig()
 //---------------------------------------------------------------------
 // Constructor
 RadioacTV::RadioacTV(void)
+: show_info(0)
+, mode(0)
+, threshold(0)
+, snapTime(0)
+, snapInterval(0)
+, palette(NULL)
+, palettes(NULL)
+, snapframe(NULL)
+, buf_width_blocks(0)
+, buf_width(0)
+, buf_height(0)
+, buf_area(0)
+, buf_margin_right(0)
+, buf_margin_left(0)
+, blurzoombuf(NULL)
+, blurzoomx(NULL)
+, blurzoomy(NULL)
 {
 	LOGI("%s(L=%d)", __func__, __LINE__);
 }

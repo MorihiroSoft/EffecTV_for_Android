@@ -119,6 +119,12 @@ int PredatorTV::writeConfig()
 //---------------------------------------------------------------------
 // Constructor
 PredatorTV::PredatorTV(void)
+: show_info(0)
+, threshold(0)
+, bgSetCnt(0)
+, bgimage(NULL)
+, bgimageY(NULL)
+, bgimageYTmp(NULL)
 {
 	LOGI("%s(L=%d)", __func__, __LINE__);
 }

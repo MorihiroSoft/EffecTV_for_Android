@@ -119,6 +119,18 @@ int DotTV::writeConfig()
 //---------------------------------------------------------------------
 // Constructor
 DotTV::DotTV(void)
+: screen_width(0)
+, screen_height(0)
+, screen_scale(0)
+, mode(0)
+, dots_width(0)
+, dots_height(0)
+, dot_size(0)
+, dot_hsize(0)
+, pattern(NULL)
+, heart_pattern(NULL)
+, sampx(NULL)
+, sampy(NULL)
 {
 	LOGI("%s(L=%d)", __func__, __LINE__);
 }

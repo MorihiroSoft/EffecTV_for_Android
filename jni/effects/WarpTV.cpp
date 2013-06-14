@@ -41,7 +41,7 @@
 #define  LOGI(...)
 #endif
 
-static const int CONFIG_VER = 1;
+//static const int CONFIG_VER = 1;
 static const char* EFFECT_NAME  = "WarpTV";
 static const char* EFFECT_TITLE = "WarpTV";
 static const char* FUNC_LIST[]  = {
@@ -79,6 +79,10 @@ void WarpTV::intialize(bool reset)
 //---------------------------------------------------------------------
 // Constructor
 WarpTV::WarpTV(void)
+: offstable(NULL)
+, disttable(NULL)
+, ctable(NULL)
+, sintable(NULL)
 {
 	LOGI("%s(L=%d)", __func__, __LINE__);
 }

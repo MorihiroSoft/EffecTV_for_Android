@@ -149,6 +149,15 @@ int LensTV::writeConfig()
 //---------------------------------------------------------------------
 // Constructor
 LensTV::LensTV(void)
+: show_info(0)
+, mode(0)
+, lens_x(0)
+, lens_y(0)
+, lens_xd(0)
+, lens_yd(0)
+, lens_size(0)
+, lens_crvr(0)
+, lens(NULL)
 {
 	LOGI("%s(L=%d)", __func__, __LINE__);
 }

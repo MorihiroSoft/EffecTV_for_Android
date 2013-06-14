@@ -127,6 +127,14 @@ int SloFastTV::writeConfig()
 //---------------------------------------------------------------------
 // Constructor
 SloFastTV::SloFastTV(void)
+: show_info(0)
+, planes(0)
+, mode(0)
+, head(0)
+, tail(0)
+, count(0)
+, buffer(NULL)
+, planetable(NULL)
 {
 	LOGI("%s(L=%d)", __func__, __LINE__);
 }

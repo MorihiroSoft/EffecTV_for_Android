@@ -112,6 +112,8 @@ int RandomDotStereoTV::writeConfig()
 //---------------------------------------------------------------------
 // Constructor
 RandomDotStereoTV::RandomDotStereoTV(void)
+: mode(0)
+, stride(0)
 {
 	LOGI("%s(L=%d)", __func__, __LINE__);
 }

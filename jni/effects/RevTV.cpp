@@ -123,6 +123,9 @@ int RevTV::writeConfig()
 //---------------------------------------------------------------------
 // Constructor
 RevTV::RevTV(void)
+: show_info(0)
+, space(0)
+, factor(0)
 {
 	LOGI("%s(L=%d)", __func__, __LINE__);
 }

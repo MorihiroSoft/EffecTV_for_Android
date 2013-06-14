@@ -38,7 +38,7 @@
 #define  LOGI(...)
 #endif
 
-static const int CONFIG_VER = 1;
+//static const int CONFIG_VER = 1;
 static const char* EFFECT_NAME  = "CycleTV";
 static const char* EFFECT_TITLE = "Cycle\nTV";
 static const char* FUNC_LIST[]  = {
@@ -74,6 +74,9 @@ void CycleTV::intialize(bool reset)
 //---------------------------------------------------------------------
 // Constructor
 CycleTV::CycleTV(void)
+: roff(0)
+, goff(0)
+, boff(0)
 {
 	LOGI("%s(L=%d)", __func__, __LINE__);
 }

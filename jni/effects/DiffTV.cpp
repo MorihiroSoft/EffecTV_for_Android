@@ -118,6 +118,9 @@ int DiffTV::writeConfig()
 //---------------------------------------------------------------------
 // Constructor
 DiffTV::DiffTV(void)
+: show_info(0)
+, g_tolerance()
+, prevbuf(NULL)
 {
 	LOGI("%s(L=%d)", __func__, __LINE__);
 }

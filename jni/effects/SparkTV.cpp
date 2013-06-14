@@ -138,6 +138,16 @@ int SparkTV::writeConfig()
 //---------------------------------------------------------------------
 // Constructor
 SparkTV::SparkTV(void)
+: show_info(0)
+, mode(0)
+, threshold(0)
+, bgIsSet(0)
+, sparks_head(0)
+, sparks(NULL)
+, sparks_life(NULL)
+, px(NULL)
+, py(NULL)
+, pp(NULL)
 {
 	LOGI("%s(L=%d)", __func__, __LINE__);
 }

@@ -58,6 +58,10 @@ void BaseEffecTV::setConfigPath(const char* dir, const char* file)
 //---------------------------------------------------------------------
 // Constructor
 BaseEffecTV::BaseEffecTV(void)
+: mUtils(NULL)
+, video_width(0)
+, video_height(0)
+, video_area(0)
 {
 	LOGI("%s(L=%d)", __func__, __LINE__);
 	mConfigPath[0] = '\0';

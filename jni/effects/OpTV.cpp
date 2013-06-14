@@ -138,6 +138,13 @@ int OpTV::writeConfig()
 //---------------------------------------------------------------------
 // Constructor
 OpTV::OpTV(void)
+: show_info(0)
+, mode(0)
+, speed(0)
+, threshold(0)
+, phase(0)
+, opmap(NULL)
+, palette(NULL)
 {
 	LOGI("%s(L=%d)", __func__, __LINE__);
 }
