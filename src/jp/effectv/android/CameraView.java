@@ -21,6 +21,8 @@
 
 package jp.effectv.android;
 
+import java.util.List;
+
 import android.content.Context;
 import android.hardware.Camera;
 import android.util.AttributeSet;
@@ -151,12 +153,31 @@ Camera.PreviewCallback
 		mAutoLock = lock;
 
 		Camera.Parameters cp = mCamera.getParameters();
+
 		if (cp.isAutoExposureLockSupported()) {
 			cp.setAutoExposureLock(lock);
 		}
+
 		if (cp.isAutoWhiteBalanceLockSupported()) {
 			cp.setAutoWhiteBalanceLock(lock);
 		}
+
+		// Focus mode
+		final List<String> fms = cp.getSupportedFocusModes();
+		if (lock) {
+			if (fms.contains(Camera.Parameters.FOCUS_MODE_FIXED)) {
+				cp.setFocusMode(Camera.Parameters.FOCUS_MODE_FIXED);
+			} else if (fms.contains(Camera.Parameters.FOCUS_MODE_INFINITY)) {
+				cp.setFocusMode(Camera.Parameters.FOCUS_MODE_INFINITY);
+			}
+		} else {
+			if (fms.contains(Camera.Parameters.FOCUS_MODE_CONTINUOUS_VIDEO)) {
+				cp.setFocusMode(Camera.Parameters.FOCUS_MODE_CONTINUOUS_VIDEO);
+			} else if (fms.contains(Camera.Parameters.FOCUS_MODE_AUTO)) {
+				cp.setFocusMode(Camera.Parameters.FOCUS_MODE_AUTO);
+			}
+		}
+
 		mCamera.setParameters(cp);
 	}
 

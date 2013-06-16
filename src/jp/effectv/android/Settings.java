@@ -22,6 +22,7 @@
 package jp.effectv.android;
 
 import java.io.File;
+import java.util.List;
 import java.util.Set;
 
 import android.content.Context;
@@ -530,6 +531,12 @@ public class Settings {
 			final boolean wb_lock = cp.isAutoWhiteBalanceLockSupported();
 			Log.v(TAG, "AutoExposureLock: "+ae_lock);
 			Log.v(TAG, "AutoWhiteBalanceLock: "+wb_lock);
+
+			// Focus mode
+			final List<String> fms = cp.getSupportedFocusModes();
+			for (final String fm : fms) {
+				Log.v(TAG, "SupportedFocusModes: "+fm);
+			}
 		}
 	}
 }
