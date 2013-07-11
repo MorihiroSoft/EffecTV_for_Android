@@ -294,7 +294,7 @@ int MatrixTV::draw(YUV* src_yuv, RGB32* dst_rgb, char* dst_msg)
 }
 
 // Key functions
-int MatrixTV::event(int key_code)
+const char* MatrixTV::event(int key_code)
 {
 	LOGI("%s(L=%d): k=%d", __func__, __LINE__, key_code);
 	switch(key_code) {
@@ -306,11 +306,11 @@ int MatrixTV::event(int key_code)
 		mode = key_code - 1;
 		break;
 	}
-	return 0;
+	return NULL;
 }
 
 // Touch action
-int MatrixTV::touch(int action, int x, int y)
+const char* MatrixTV::touch(int action, int x, int y)
 {
 	LOGI("%s(L=%d): action=%d, x=%d, y=%d", __func__, __LINE__, action, x, y);
 	switch(action) {
@@ -326,7 +326,7 @@ int MatrixTV::touch(int action, int x, int y)
 		pause = 0;
 		break;
 	}
-	return 0;
+	return NULL;
 }
 
 //---------------------------------------------------------------------

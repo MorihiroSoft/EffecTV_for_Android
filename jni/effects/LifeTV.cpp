@@ -250,7 +250,7 @@ int LifeTV::draw(YUV* src_yuv, RGB32* dst_rgb, char* dst_msg)
 }
 
 // Key functions
-int LifeTV::event(int key_code)
+const char* LifeTV::event(int key_code)
 {
 	LOGI("%s(L=%d): k=%d", __func__, __LINE__, key_code);
 	switch(key_code) {
@@ -272,11 +272,11 @@ int LifeTV::event(int key_code)
 		mUtils->image_set_threshold_yuv_y(threshold);
 		break;
 	}
-	return 0;
+	return NULL;
 }
 
 // Touch action
-int LifeTV::touch(int action, int x, int y)
+const char* LifeTV::touch(int action, int x, int y)
 {
 	LOGI("%s(L=%d): action=%d, x=%d, y=%d", __func__, __LINE__, action, x, y);
 	switch(action) {
@@ -288,7 +288,7 @@ int LifeTV::touch(int action, int x, int y)
 	case 2: // Up
 		break;
 	}
-	return 0;
+	return NULL;
 }
 
 //---------------------------------------------------------------------

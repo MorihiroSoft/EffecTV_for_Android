@@ -376,19 +376,21 @@ JNIEXPORT jint JNICALL Java_jp_effectv_android_MainApplication_native_1draw
 }
 
 /** . */
-JNIEXPORT jint JNICALL Java_jp_effectv_android_MainApplication_native_1event
+JNIEXPORT jstring JNICALL Java_jp_effectv_android_MainApplication_native_1event
 (JNIEnv* env, jclass clazz, jint jKeyCode)
 {
 	LOGI("%s(L=%d): k=%d", __func__, __LINE__, jKeyCode);
-	return sEffects[sEffectType]->event(jKeyCode);
+	const char* msg = sEffects[sEffectType]->event(jKeyCode);
+	return (msg!=NULL ? env->NewStringUTF(msg) : NULL);
 }
 
 /** . */
-JNIEXPORT jint JNICALL Java_jp_effectv_android_MainApplication_native_1touch
+JNIEXPORT jstring JNICALL Java_jp_effectv_android_MainApplication_native_1touch
 (JNIEnv* env, jclass clazz, jint jAction, jint jX, jint jY)
 {
 	LOGI("%s(L=%d): a=%d, x=%d, y=%d", __func__, __LINE__, jAction, jX, jY);
-	return sEffects[sEffectType]->touch(jAction, jX, jY);
+	const char* msg = sEffects[sEffectType]->touch(jAction, jX, jY);
+	return (msg!=NULL ? env->NewStringUTF(msg) : NULL);
 }
 
 /** . */

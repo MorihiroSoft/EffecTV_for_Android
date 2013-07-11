@@ -70,17 +70,17 @@ JNIEXPORT jint JNICALL Java_jp_effectv_android_MainApplication_native_1draw
 /*
  * Class:     jp_effectv_android_MainApplication
  * Method:    native_event
- * Signature: (I)I
+ * Signature: (I)Ljava/lang/String;
  */
-JNIEXPORT jint JNICALL Java_jp_effectv_android_MainApplication_native_1event
+JNIEXPORT jstring JNICALL Java_jp_effectv_android_MainApplication_native_1event
   (JNIEnv *, jclass, jint);
 
 /*
  * Class:     jp_effectv_android_MainApplication
  * Method:    native_touch
- * Signature: (III)I
+ * Signature: (III)Ljava/lang/String;
  */
-JNIEXPORT jint JNICALL Java_jp_effectv_android_MainApplication_native_1touch
+JNIEXPORT jstring JNICALL Java_jp_effectv_android_MainApplication_native_1touch
   (JNIEnv *, jclass, jint, jint, jint);
 
 /*

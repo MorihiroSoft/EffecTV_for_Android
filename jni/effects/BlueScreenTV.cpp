@@ -362,7 +362,7 @@ int BlueScreenTV::draw(YUV* src_yuv, RGB32* dst_rgb, char* dst_msg)
 }
 
 // Key functions
-int BlueScreenTV::event(int key_code)
+const char* BlueScreenTV::event(int key_code)
 {
 	LOGI("%s(L=%d): k=%d", __func__, __LINE__, key_code);
 	switch(key_code) {
@@ -397,14 +397,14 @@ int BlueScreenTV::event(int key_code)
 		threshold2 = threshold << 1;
 		break;
 	}
-	return 0;
+	return NULL;
 }
 
 // Touch action
-int BlueScreenTV::touch(int action, int x, int y)
+const char* BlueScreenTV::touch(int action, int x, int y)
 {
 	LOGI("%s(L=%d): action=%d, x=%d, y=%d", __func__, __LINE__, action, x, y);
-	return 0;
+	return NULL;
 }
 
 //---------------------------------------------------------------------

@@ -90,9 +90,9 @@ public:
 	/** Convert. */
 	virtual int draw(YUV* src_yuv, RGB32* dst_rgb, char* dst_msg) = 0;
 	/** Key functions. */
-	virtual int event(int key_code) = 0;
+	virtual const char* event(int key_code) = 0;
 	/** Touch action. */
-	virtual int touch(int action, int x, int y) = 0;
+	virtual const char* touch(int action, int x, int y) = 0;
 };
 
 #endif // __BASEEFFECTV__

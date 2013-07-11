@@ -58,8 +58,8 @@ public:
 	virtual int start(Utils* utils, int width, int height);
 	virtual int stop(void);
 	virtual int draw(YUV* src_yuv, RGB32* dst_rgb, char* dst_msg);
-	virtual int event(int key_code);
-	virtual int touch(int action, int x, int y);
+	virtual const char* event(int key_code);
+	virtual const char* touch(int action, int x, int y);
 
 protected:
 	void drawDisappearing(RGB32* src, RGB32* dst);

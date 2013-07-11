@@ -234,7 +234,7 @@ int PuzzleTV::draw(YUV* src_yuv, RGB32* dst_rgb, char* dst_msg)
 }
 
 // Key functions
-int PuzzleTV::event(int key_code)
+const char* PuzzleTV::event(int key_code)
 {
 	LOGI("%s(L=%d): k=%d", __func__, __LINE__, key_code);
 	switch(key_code) {
@@ -247,22 +247,22 @@ int PuzzleTV::event(int key_code)
 		hint = 1 - hint;
 		break;
 	}
-	return 0;
+	return NULL;
 }
 
 // Touch action
-int PuzzleTV::touch(int action, int x, int y)
+const char* PuzzleTV::touch(int action, int x, int y)
 {
 	LOGI("%s(L=%d): action=%d, x=%d, y=%d", __func__, __LINE__, action, x, y);
 	switch(action) {
 	case 0: { // Down
 		if (movingBlock >= 0) {
-			return -1;
+			return NULL;
 		}
 		int bx = x / blockSizeW;
 		int by = y / blockSizeH;
 		if (bx < 0 || bx >= blockW || by < 0 || by >= blockH) {
-			return -1;
+			return NULL;
 		}
 		int bn = bx + by * blockW;
 		if (bn - blockW == spaceBlock) {
@@ -284,7 +284,7 @@ int PuzzleTV::touch(int action, int x, int y)
 	case 2: // Up
 		break;
 	}
-	return 0;
+	return NULL;
 }
 
 //---------------------------------------------------------------------

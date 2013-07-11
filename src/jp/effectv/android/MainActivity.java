@@ -47,6 +47,7 @@ import android.widget.ArrayAdapter;
 import android.widget.CompoundButton;
 import android.widget.ImageButton;
 import android.widget.ListView;
+import android.widget.Toast;
 import android.widget.ToggleButton;
 
 public class MainActivity extends Activity implements
@@ -218,7 +219,10 @@ ToggleButton.OnCheckedChangeListener
 			setEffectType(position);
 			break;
 		case R.id.lst_funcs:
-			MainApplication.native_event(position);
+			final String msg = MainApplication.native_event(position);
+			if (msg != null) {
+				Toast.makeText(this, msg, Toast.LENGTH_LONG).show();
+			}
 			break;
 		}
 	}
@@ -237,7 +241,10 @@ ToggleButton.OnCheckedChangeListener
 			case MotionEvent.ACTION_DOWN: {
 				int x = (int)event.getX() * cw / ew;
 				int y = (int)event.getY() * ch / eh;
-				MainApplication.native_touch(0, x, y);
+				final String msg = MainApplication.native_touch(0, x, y);
+				if (msg != null) {
+					Toast.makeText(this, msg, Toast.LENGTH_LONG).show();
+				}
 				return true;
 			}
 			case MotionEvent.ACTION_MOVE: {
@@ -247,7 +254,10 @@ ToggleButton.OnCheckedChangeListener
 				return true;
 			}
 			case MotionEvent.ACTION_UP: {
-				MainApplication.native_touch(2, 0, 0);
+				final String msg = MainApplication.native_touch(2, 0, 0);
+				if (msg != null) {
+					Toast.makeText(this, msg, Toast.LENGTH_LONG).show();
+				}
 				return true;
 			}
 			}

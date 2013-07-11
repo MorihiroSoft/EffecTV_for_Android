@@ -47,8 +47,8 @@ public class MainApplication extends Application
 	native public static int native_start(boolean f, int w, int h, int fps, int effect_type);
 	native public static int native_stop();
 	native public static int native_draw(byte[] src_yuv, int[] dst_rgb, char[] dst_msg, int dst_yuv_fmt, byte[] dst_yuv);
-	native public static int native_event(int key_code);
-	native public static int native_touch(int action, int x, int y);
+	native public static String native_event(int key_code);
+	native public static String native_touch(int action, int x, int y);
 	native public static int native_cnvavc(String src_path, String dst_path);
 
 	//---------------------------------------------------------------------

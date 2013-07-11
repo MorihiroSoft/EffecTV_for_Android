@@ -261,14 +261,14 @@ int DotTV::draw(YUV* src_yuv, RGB32* dst_rgb, char* dst_msg)
 }
 
 // Key functions
-int DotTV::event(int key_code)
+const char* DotTV::event(int key_code)
 {
 	LOGI("%s(L=%d): k=%d", __func__, __LINE__, key_code);
-	return 0;
+	return NULL;
 }
 
 // Touch action
-int DotTV::touch(int action, int x, int y)
+const char* DotTV::touch(int action, int x, int y)
 {
 	LOGI("%s(L=%d): action=%d, x=%d, y=%d", __func__, __LINE__, action, x, y);
 	switch(action) {
@@ -280,7 +280,7 @@ int DotTV::touch(int action, int x, int y)
 	case 2: // Up -> Space
 		break;
 	}
-	return 0;
+	return NULL;
 }
 
 //---------------------------------------------------------------------
