@@ -39,6 +39,7 @@
 #include "effects/DotTV.h"
 #include "effects/EdgeTV.h"
 #include "effects/EdgeBlurTV.h"
+#include "effects/EnergyTV.h"
 #include "effects/FireTV.h"
 #include "effects/HolographicTV.h"
 #include "effects/LensTV.h"
@@ -110,6 +111,7 @@ static BaseEffecTV* sEffects[] = {
 		new DotTV(),
 		new EdgeBlurTV(),
 		new EdgeTV(),
+		new EnergyTV(),
 		new FireTV(),
 		new HolographicTV(),
 		new LensTV(),

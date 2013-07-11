@@ -72,6 +72,7 @@ public:
 	 */
 	void fastsrand(unsigned int);
 	inline unsigned int fastrand() {return (fastrand_val=fastrand_val*1103515245+12345);}
+	float fastrandf();
 
 private:
 	int video_width;

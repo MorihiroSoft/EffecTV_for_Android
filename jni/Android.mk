@@ -46,6 +46,7 @@ LOCAL_SRC_FILES := \
     effects/DotTV.cpp \
     effects/EdgeTV.cpp \
     effects/EdgeBlurTV.cpp \
+    effects/EnergyTV.cpp \
     effects/FireTV.cpp \
     effects/HolographicTV.cpp \
     effects/LensTV.cpp \

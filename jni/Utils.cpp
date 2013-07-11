@@ -49,9 +49,9 @@
 // G = .... ..GG GGGG GG..
 // B = .... .... BBBB BBBB
 #define RGBtoBG(R,G,B,P) \
-	R = (*P & 0x00FF0000) >> (16-1); \
-	G = (*P & 0x0000FF00) >> ( 8-2); \
-	B = (*P & 0x000000FF);
+		R = (*P & 0x00FF0000) >> (16-1); \
+		G = (*P & 0x0000FF00) >> ( 8-2); \
+		B = (*P & 0x000000FF);
 
 //---------------------------------------------------------------------
 // UTILS: PUBLIC METHODS
@@ -112,6 +112,11 @@ void Utils::HSItoRGB(double H, double S, double I, int *r, int *g, int *b)
 void Utils::fastsrand(unsigned int seed)
 {
 	fastrand_val = seed;
+}
+
+//
+float Utils::fastrandf() {
+	return (float)(fastrand()&0xFFFFFF) / (float)0xFFFFFF;
 }
 
 //---------------------------------------------------------------------
@@ -790,7 +795,7 @@ YUV* Utils::yuv_RGBtoYUV(RGB32* rgb32, int yuv_fmt, YUV* yuv)
 	case 3: // Encoder.ColorFormat_I420 (java)
 		return yuv_RGBtoI420(rgb32, yuv);
 	}
-    return NULL;
+	return NULL;
 }
 
 //---------------------------------------------------------------------
