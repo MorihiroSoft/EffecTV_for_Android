@@ -347,11 +347,21 @@ public class Settings {
 
 	/** getter(type): Photo save format. */
 	public Bitmap.CompressFormat getPhotoFmtAsType() {
-		final String val = getCameraFps();
+		final String val = getPhotoFmt();
 		if ("jpg".equals(val)) {
 			return Bitmap.CompressFormat.JPEG;
 		} else {
 			return Bitmap.CompressFormat.PNG;
+		}
+	}
+
+	/** getter(type): Photo save mime type. */
+	public String getPhotoFmtAsMime() {
+		final String val = getPhotoFmt();
+		if ("jpg".equals(val)) {
+			return "image/jpeg";
+		} else {
+			return "image/png";
 		}
 	}
 

@@ -469,7 +469,7 @@ ToggleButton.OnCheckedChangeListener
 		// Registry MediaScanner
 		MediaScannerConnection.scanFile(this,
 				new String[]{ path.getAbsolutePath() },
-				new String[]{ "image/jpeg" },
+				new String[]{ mSettings.getPhotoFmtAsMime() },
 				null);
 
 		// Release bitmap
